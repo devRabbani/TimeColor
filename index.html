@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TimeColr</title>
+</head>
+<body>
+     <center>
+       <h1 style="margin-top: 12%;">COLOR WILL CHANGES ACCORDING TO TIME</h1>
+       <h2 style="text-align: center; font-size: 500%;margin-bottom: 0;">R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B</h2><br>
+       <p style="font-size: 400%;"></p>
+       
+     </center>
+      
+  <script>
+    function t(){
+       let a=new Date();
+     let h=a.getHours().toString();
+     let m=a.getMinutes().toString();
+    let s=a.getSeconds().toString();
+    let time="#"+h+m+s;
+    document.querySelector('p').innerHTML=h+"&nbsp;&nbsp;&nbsp;&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+m+"&nbsp;&nbsp;&nbsp;&#58;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+s;
+    document.querySelector('body').style.backgroundColor=time;
+    }
+    window.setInterval(t,1000);
+  </script>
+</body>
+</html>
